@@ -19,30 +19,30 @@ int main() {
     
     int maks = x[0];
     
-    for (int i=0;i < n-1; i++){
+    for (int i=0;i < n-1; i++){ //cari nilai terbesar
         if (x[i] >= maks){
             maks = x[i];
         }
     }
     
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++){ //kalkulasi count dan days
         if (x[i] == maks){
             days[count] = i+1;
             count++;
         }
     }
     
-    printf("Max : %d\n", maks);
-    printf("Count : %d\n", count);
-    printf("days :");
-    for (int i=0; i < count; i++){
-        printf(" %d", days[i]);
+    printf("Max : %d\n", maks); //output max
+    printf("Count : %d\n", count); //output count
+    printf("days :"); 
+    for (int i=0; i < count; i++){ //ouput semua isi dari array days
+        printf(" %d", days[i]); //output days
     }
-    for (int i=0; i < n; i++){
+    for (int i=0; i < n; i++){ //hitung sum(jumlah dari semua input)
         sum = sum + x[i];
     }
     
-    percentage = ((float)(maks*count)/sum);
-    printf("\nPercentage : %.3f%%", percentage * 100);
+    percentage = ((float)(maks*count)/sum); //hitung persentasi
+    printf("\nPercentage : %.3f%%", percentage * 100); //output persentasi
     return 0;
 }
